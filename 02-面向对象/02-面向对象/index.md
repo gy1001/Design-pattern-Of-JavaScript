@@ -150,4 +150,8 @@ xiaoming.getWeight();
 
 ## js 的应用举例
 
+> - JQuery 就是一个 Class
+> - \$('p')是 JQuery 的一个实例
+> -
+
 ## 面向对象的意义
