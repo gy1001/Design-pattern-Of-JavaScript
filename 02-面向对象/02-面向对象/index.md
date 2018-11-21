@@ -80,11 +80,17 @@ xiaohong.speak();
 
 ### 封装，数据的权限和保密
 
-> 三大关键字，但是 ES6 暂时不支持，可以用 typeScript 来演示
->
+#### 三大关键字，但是 ES6 暂时不支持，可以用 typeScript 来演示
+
 > - public 完全开放
 > - protected 对子类开放
 > - private 对自己开放
+
+#### 作用，意义
+
+> - 减少耦合，不该外露的不外露
+> - 利于数据、接口的权限管理
+> - ES6 目前不支持，一般认为 \_ 开头的属性是 private
 
 ```javascript
 // 父类
@@ -131,6 +137,11 @@ xiaoming.getWeight();
 ```
 
 ### 多态, 同一接口不同实现
+
+> - 同一个接口，不同表现
+> - JS 应用极少
+> - 需要结合 java 等语言的接口、重写、重载等功能
+>   ![多态]('C:\GY\Learn\Design-pattern-Of-JavaScript\02-面向对象\02-面向对象\third.png')
 
 ## js 的应用举例
 
