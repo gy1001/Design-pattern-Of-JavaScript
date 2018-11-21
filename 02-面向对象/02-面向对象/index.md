@@ -106,7 +106,7 @@ class People{
 }
 
 // 子类
-class Student extens People{
+class Student extends People{
   number
   private girlfriend // 定义private属性
   constructor(name,age,number){
@@ -121,6 +121,13 @@ class Student extens People{
     alert(`Weight is ${this.weight}`)
   }
 }
+// 实例
+let xiaoming= new Student("xiaoming",10,'A1')
+xiaoming.getWeight();
+// console.log(xiaoming.girlfirend) 直接编辑就会报错，因为属性是私有的
+// 以上代码可以在
+// http://www.typescriptlang.org/play/
+// 运行
 ```
 
 ### 多态, 同一接口不同实现
