@@ -16,5 +16,14 @@ module.exports = {
     contentBase: path.join(__dirname, "./release"), // 根目录
     open: true, //自动打开浏览器
     port: 9000 //端口
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js?$/,
+        exclude: /(node_modules)/,
+        loader: "babel-loader"
+      }
+    ]
   }
 };
