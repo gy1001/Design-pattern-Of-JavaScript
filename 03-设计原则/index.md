@@ -32,7 +32,76 @@
 
 ##### 演示：沉默是金　＋　让每个程序都成为过滤器
 
-## 五大设计原则
+> - ls 在 linux 是展示当前目录所有文件，ls | grep \*.json | grep 'package.json'　当过滤结果有时候展示结果，没有时候直接不提示不展示不报错，这即是沉默是金
+
+## 五大设计原则 S O L I D
+
+### S－单一职责原则
+
+> - 一个程序只做好一件事
+> - 如果功能过于复杂就拆分开，每个部分保持独立
+
+### O－开放封闭原则
+
+> - 对扩展开放，对修改封闭
+> - 增加需求时，扩展新代码，而非修改已有代码
+> - 这是软件设计的终极目标
+
+### L－李氏置换原则
+
+> - 子类能覆盖父类
+> - 父类能出现的地方子类也就能出现
+> - JS 中使用较少（弱类型 & 继承使用较少）
+
+### I－接口独立原则
+
+> - 保持接口的单一独立，避免出现“胖接口”
+> - JS 中没有接口(TypeScript 除外)，使用较少
+> - 类似于单一职责原则，但是这里更关注接口
+
+### D－依赖导致原则
+
+> - 面向接口编程，依赖于抽象而不依赖于具体
+> - 使用方只关注接口而不关注具体类的实现
+> - JS 中使用较少(没有接口＆弱类型)
+
+#### 设计原则总结
+
+> - S O 体现较多，详细介绍
+> - L I D 体现较少，但是要了解其用意
+
+```javascript
+// 用promise来说明S O
+// 加载图片
+functipn loadImg(src){
+  var promise = new Promise(function(resolve,reject){
+    var img = document.createElement('img');
+    img.onload = function(){
+      resolve(img)
+    }
+    img.onerror = function(){
+      reject(img)
+    }
+    img.src = src
+  })
+  return promise
+}
+var src = 'https://www.imooc.com/static/img/index/logo.png';
+var result = loadImg(src)
+result.then(function(img){
+  console.log('img.width',img.width)
+  return img
+}).then(function(img){
+  console.log('img.height',img.height)
+}).catch(function(ex){
+  // 统一捕捉异常
+  console.log(ex)
+});
+单一职责原则：每一个then中的逻辑只做好一件事
+开放封闭原则：如果有新需求，就扩展then
+对扩展开放，对修改封闭
+
+```
 
 ## 从设计到模式
 
