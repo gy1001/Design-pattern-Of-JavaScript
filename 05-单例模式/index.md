@@ -20,4 +20,17 @@
 
 ## 场景
 
+> - JQuery 只有一个\$
+
+```javascript
+// jQuery 只有一个\$ -
+if (window.jQuery !== null) {
+  return window.jQuery;
+} else {
+  //　初始化
+}
+```
+
+> - 模拟登录框
+
 ## 总结
