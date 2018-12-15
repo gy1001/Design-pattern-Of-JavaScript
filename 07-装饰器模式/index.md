@@ -26,6 +26,4 @@
     A = decorator(A) || A
    -->
 
-> - 装饰方法
-
 ### core-decorators
