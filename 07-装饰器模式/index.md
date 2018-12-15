@@ -27,3 +27,41 @@
    -->
 
 ### core-decorators
+
+> - 第三方开源 lib
+
+<!-- 首先安装npm i core-decorators --save
+// 开始编码
+
+import {readonly} from 'core-decorators'
+
+class Person{
+   @readonly
+   name(){
+      return 'zhang'
+   }
+}
+
+let p = new Person()
+alert(p.name())
+
+p.name = function(){ } // 此处会报错
+ -->
+
+> - 提供常用的装饰器
+> - 查阅文档 https://www.npmjs.com/package/core-decorators
+
+> https://github.com/jayphelps/core-decorators
+
+## 设计原则验证
+
+> - 将现有对象和装饰器进行分离，两者独立存在
+> - 符合开放封闭原则
+
+#总结
+
+## 介绍和示例
+
+## UML 类图和演示
+
+## 经典使用场景
