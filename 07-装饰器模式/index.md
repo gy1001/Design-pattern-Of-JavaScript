@@ -17,6 +17,15 @@
 
 > - 配置环境
 > - 装饰类
+
+ <!-- 装饰器的原理
+    @decorator
+    class A{}
+    等同于
+    class A{}
+    A = decorator(A) || A
+   -->
+
 > - 装饰方法
 
 ### core-decorators
